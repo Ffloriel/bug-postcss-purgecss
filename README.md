@@ -3,8 +3,9 @@
 
 ## Steps to reproduce:
 
-1. yarn install
-2. yarn build
+1. `git clone git@github.com:dotnetCarpenter/bug-postcss-purgecss.git && cd bug-postcss-purgecss`
+1. `yarn install`
+2. `yarn build`
 
 ## Actual behavior
 

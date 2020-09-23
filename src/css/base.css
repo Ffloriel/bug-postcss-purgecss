@@ -1,0 +1,70 @@
+/* Using <link> element instead of import
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+:root {
+	--color-text: black;
+	--color-light: hsl(26, 100%, 99%);
+  --color-dark: hsl(210, 100%, 80%); /* #99ccff */
+	--color-dark-lighter: hsl(0, 0%, 93%);
+
+	/* --sm: 640px;
+	--md: 768px;
+	--lg: 1024px; */
+
+	--margin-vertical: .83rem;
+	--margin-horizontal: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+	:root {
+		--margin-vertical: 2rem;
+		--margin-horizontal: 2.2rem;
+	}
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	max-width: 1920px;
+	margin: 0 auto;
+
+	background-color: var(--color-light);
+
+	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	font-size: 1.1em;
+	line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.title {
+	font-family: Lora, serif;
+}
+
+h1 { font-size: 1.8em; }
+
+h2 {
+	font-size: 1.6em;
+	margin-bottom: -0.2em;
+}
+
+h3 { font-size: 1.5em; }
+
+p { margin-bottom: var(--margin-vertical); }
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration-color: var(--color-dark);
+}

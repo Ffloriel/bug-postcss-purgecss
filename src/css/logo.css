@@ -1,0 +1,25 @@
+/* BEM http://getbem.com/naming/
+Block
+	logo
+*/
+
+.logo {
+    position: absolute;
+    top: 0;
+    right: var(--margin-horizontal);
+
+    color: var(--color-light, white);
+    text-shadow: 1px 1px 2px black;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 640px) {
+    .logo {
+        position: static;
+        color: unset;
+        text-shadow: unset;
+    }
+}

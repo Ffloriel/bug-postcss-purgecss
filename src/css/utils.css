@@ -1,0 +1,35 @@
+/* --sm: 640px; */
+/* --md: 768px; */
+/* --lg: 1024px; */
+
+
+/* Center things inside this class */
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 640px) {
+	.sm--hidden {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+	.md--hidden {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.lg--hidden {
+		display: none;
+	}
+
+	/* Full page width on big screens */
+	.lg--wide {
+		max-width: 100%;
+		flex: 100%;
+	}
+}

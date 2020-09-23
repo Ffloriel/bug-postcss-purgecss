@@ -1,0 +1,82 @@
+/* BEM http://getbem.com/naming/
+Block
+	some-icons
+Element
+	some-icons__icons
+*/
+
+/* KLUDGE: fix for https://github.com/MadLittleMods/postcss-css-variables/issues/88 */
+:root {
+	--size: 2.2em;
+	--font-size: 1.1em;
+	--border-width: 1px;
+	--border-color: var(--color-text);
+	--speed: .2s;
+}
+
+.some-icons {
+	/* --size: 2.2em;
+	--font-size: 1.1em;
+	--border-width: 1px;
+	--border-color: var(--color-text);
+	--speed: .2s; */
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	font-size: var(--font-size);
+}
+
+/* KLUDGE: magix fix so icons does not get squezed on mobile */
+@media screen and (max-width: 460px) {
+	.some-icons {
+		--font-size: 4vw;
+	}
+}
+
+
+.some-icons__icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	width: var(--size);
+	height: var(--size);
+
+	border: var(--border-width) solid var(--border-color);
+	border-radius: 50%;
+
+	transition: border-top-color var(--speed) linear 0s, border-right-color var(--speed) linear 0.1s,
+							border-bottom-color var(--speed) linear 0.2s,
+							border-left-color var(--speed) linear 0.3s;
+	overflow: visible;
+}
+
+.some-icons__icons:hover,
+.some-icons__icons:focus {
+	border-color: var(--color-light);
+
+	text-decoration: none;
+}
+
+.some-icons__icons::before {
+	position: absolute;
+	display: block;
+
+	top: calc(var(--border-width) * -1);
+	left: calc(var(--border-width) * -1);
+
+	width: var(--size);
+	height: var(--size);
+
+	border: var(--border-width) dashed var(--border-color);
+	border-radius: 50%;
+
+	content: '';
+}
+.some-icons__icons::before:hover,
+.some-icons__icons::before:focus {
+	border-color: var(--color-light);
+}

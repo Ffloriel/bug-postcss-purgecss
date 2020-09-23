@@ -1,0 +1,17 @@
+/* BEM http://getbem.com/naming/
+Block
+	footer
+Element
+	footer__companyname
+*/
+
+.footer {
+	margin: 0 var(--margin-horizontal);
+	border-top: 2px var(--color-dark-lighter) solid;
+}
+
+.footer__companyname {
+	color: hsl(0, 0%, 35%);
+	/* font-family: Lora, serif; */
+	text-align: center;
+}

@@ -1,0 +1,15 @@
+/* BEM http://getbem.com/naming/
+Block
+	flags
+Element
+	flags__icon
+*/
+
+.flags {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flags__icon {
+	width: 3.3em;
+}

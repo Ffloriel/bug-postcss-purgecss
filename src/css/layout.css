@@ -1,0 +1,21 @@
+.top-layout {
+	display: flex;
+	flex-direction: column;
+}
+
+.hero {
+	order: 1;
+}
+
+.nav {
+	order: 2;
+}
+
+@media (min-width: 640px) {
+	.nav--top {
+			order: 1;
+	}
+	.hero {
+			order: 2;
+	}
+}

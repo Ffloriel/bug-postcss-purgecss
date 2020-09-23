@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: var(--margin-vertical);
+    padding: 0 var(--margin-horizontal);
+}
+
+@media screen and  (min-width: 640px) {
+    .nav--top {
+        align-items: baseline;
+
+        margin-bottom: 0;
+    }
+}
